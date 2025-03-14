@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <a href="#" className="flex items-center">
-              <span className="text-xl font-display font-bold">ArcaneAI</span>
+              <span className="text-xl font-display font-bold">Alunera</span>
             </a>
           </div>
 
@@ -49,7 +49,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Get Started
+              Book a Demo
             </Button>
           </div>
 
@@ -82,7 +82,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-              Get Started
+              Book a Demo
             </Button>
           </div>
         </div>
