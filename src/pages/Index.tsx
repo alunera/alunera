@@ -10,7 +10,12 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   useEffect(() => {
-    // Fix animation issues - add default visibility to sections
+    // Make all content visible immediately
+    document.querySelectorAll('.opacity-0').forEach(element => {
+      element.classList.add('opacity-100');
+    });
+    
+    // Ensure animation classes are applied properly
     document.querySelectorAll('.animate-fade-in').forEach(element => {
       element.classList.add('opacity-100');
     });
@@ -43,12 +48,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <Hero />
-      <Services />
-      <ChatSimulation />
-      <ReputationManagement />
-      <Contact />
-      <Footer />
+      <div className="content-wrapper">
+        <Hero />
+        <Services />
+        <ChatSimulation />
+        <ReputationManagement />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 };

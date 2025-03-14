@@ -134,6 +134,12 @@
   .glass-panel {
     @apply bg-white/80 backdrop-blur-lg rounded-2xl shadow-sm border border-white/20;
   }
+  
+  /* Make sure ALL content is visible by default */
+  .content-wrapper > * {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
 }
 
 /* Animation delays */
