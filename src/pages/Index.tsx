@@ -10,7 +10,12 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   useEffect(() => {
-    // Smooth scroll for anchor links
+    // Fix animation issues - add default visibility to sections
+    document.querySelectorAll('.animate-fade-in').forEach(element => {
+      element.classList.add('opacity-100');
+    });
+    
+    // Implement proper smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();

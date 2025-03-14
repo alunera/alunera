@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Check, Star, ThumbsUp, ShieldCheck } from 'lucide-react';
 
@@ -16,28 +15,15 @@ const FeatureBox = ({
   const boxRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          boxRef.current?.classList.add('animate-fade-up');
-        }
-      },
-      { threshold: 0.1 }
-    );
-
     if (boxRef.current) {
-      observer.observe(boxRef.current);
+      setTimeout(() => {
+        boxRef.current?.classList.add('opacity-100');
+      }, 100);
     }
-
-    return () => {
-      if (boxRef.current) {
-        observer.unobserve(boxRef.current);
-      }
-    };
   }, []);
 
   return (
-    <div ref={boxRef} className={`opacity-0 ${delay} flex flex-col bg-white rounded-xl p-6 border border-border shadow-sm`}>
+    <div ref={boxRef} className={`opacity-0 transition-opacity duration-500 ease-in-out ${delay} flex flex-col bg-white rounded-xl p-6 border border-border shadow-sm`}>
       <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
         {icon}
       </div>
@@ -51,28 +37,20 @@ const ReputationManagement = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          sectionRef.current?.classList.add('animate-fade-in');
-        }
-      },
-      { threshold: 0.1 }
-    );
-
     if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+      setTimeout(() => {
+        sectionRef.current?.classList.add('opacity-100');
+      }, 100);
     }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
   }, []);
 
   return (
-    <div id="reputation" className="bg-secondary/30 py-24" ref={sectionRef} style={{ opacity: 0 }}>
+    <div 
+      id="reputation" 
+      className="bg-secondary/30 py-24 transition-opacity duration-500 ease-in-out" 
+      ref={sectionRef} 
+      style={{ opacity: 0 }}
+    >
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>

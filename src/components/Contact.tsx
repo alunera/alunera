@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -37,6 +36,14 @@ const Contact = () => {
   };
 
   useEffect(() => {
+    // Fix animation by ensuring visibility
+    if (sectionRef.current) {
+      // Short timeout to ensure DOM is ready
+      setTimeout(() => {
+        sectionRef.current?.classList.add('opacity-100');
+      }, 100);
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -58,7 +65,12 @@ const Contact = () => {
   }, []);
 
   return (
-    <div id="contact" className="py-24" ref={sectionRef} style={{ opacity: 0 }}>
+    <div 
+      id="contact" 
+      className="py-24 transition-opacity duration-500 ease-in-out" 
+      ref={sectionRef} 
+      style={{ opacity: 0 }}
+    >
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-title">Ready to Transform Your Customer Experience?</h2>

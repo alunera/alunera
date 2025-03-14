@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ShieldCheck, Share2, Bot } from 'lucide-react';
 
@@ -18,30 +17,17 @@ const ServiceCard = ({
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          cardRef.current?.classList.add('animate-fade-up');
-        }
-      },
-      { threshold: 0.1 }
-    );
-
     if (cardRef.current) {
-      observer.observe(cardRef.current);
+      setTimeout(() => {
+        cardRef.current?.classList.add('opacity-100');
+      }, 100);
     }
-
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
   }, []);
 
   return (
     <div 
       ref={cardRef} 
-      className={`opacity-0 ${delay} rounded-xl p-8 border border-border bg-white shadow-sm hover:shadow-md transition-all duration-300`}
+      className={`opacity-0 transition-opacity duration-500 ease-in-out ${delay} rounded-xl p-8 border border-border bg-white shadow-sm hover:shadow-md transition-all duration-300`}
     >
       <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${color} mb-6`}>
         {icon}
@@ -56,28 +42,20 @@ const Services = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          sectionRef.current?.classList.add('animate-fade-in');
-        }
-      },
-      { threshold: 0.1 }
-    );
-
     if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+      setTimeout(() => {
+        sectionRef.current?.classList.add('opacity-100');
+      }, 100);
     }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
   }, []);
 
   return (
-    <div id="services" className="bg-secondary/30 py-24" ref={sectionRef} style={{ opacity: 0 }}>
+    <div 
+      id="services" 
+      className="bg-secondary/30 py-24 transition-opacity duration-500 ease-in-out" 
+      ref={sectionRef} 
+      style={{ opacity: 0 }}
+    >
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-title">AI-Powered Solutions</h2>

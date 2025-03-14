@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -149,7 +148,6 @@ const WhatsAppDemo = () => {
 };
 
 const InstagramDemo = () => {
-  // Similar to WhatsAppDemo, but with Instagram styling
   return (
     <div className="w-full h-[500px] bg-gray-50 rounded-xl border border-border overflow-hidden shadow-sm">
       <div className="bg-white border-b border-border p-4">
@@ -196,7 +194,6 @@ const InstagramDemo = () => {
 };
 
 const WebsiteDemo = () => {
-  // Similar to WhatsAppDemo, but with Website styling
   return (
     <div className="w-full h-[500px] bg-gray-50 rounded-xl border border-border overflow-hidden shadow-sm">
       <div className="bg-white border-b border-border p-4">
@@ -246,28 +243,20 @@ const ChatSimulation = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          sectionRef.current?.classList.add('animate-fade-in');
-        }
-      },
-      { threshold: 0.1 }
-    );
-
     if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+      setTimeout(() => {
+        sectionRef.current?.classList.add('opacity-100');
+      }, 100);
     }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
   }, []);
 
   return (
-    <div id="how-it-works" className="py-24" ref={sectionRef} style={{ opacity: 0 }}>
+    <div 
+      id="how-it-works" 
+      className="py-24 transition-opacity duration-500 ease-in-out" 
+      ref={sectionRef} 
+      style={{ opacity: 0 }}
+    >
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="section-title">Experience Our AI Agents</h2>
