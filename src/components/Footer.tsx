@@ -8,7 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="md:col-span-2">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold mb-2">ArcaneAI</h2>
+              <img 
+                src="/lovable-uploads/c0c4fd0b-c8ca-4988-9e7a-b8f3c7d579c6.png" 
+                alt="Alunera Logo" 
+                className="h-12 mb-4 brightness-0 invert"
+              />
               <p className="text-primary-foreground/80">
                 Transforming customer interactions with intelligent AI agents for WhatsApp, Instagram, and web.
               </p>

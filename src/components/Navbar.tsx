@@ -33,7 +33,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <a href="#" className="flex items-center">
-              <span className="text-xl font-display font-bold">Alunera</span>
+              <img 
+                src="/lovable-uploads/c0c4fd0b-c8ca-4988-9e7a-b8f3c7d579c6.png" 
+                alt="Alunera Logo" 
+                className="h-8 md:h-10"
+              />
             </a>
           </div>
 
