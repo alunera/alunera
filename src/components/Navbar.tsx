@@ -48,7 +48,7 @@ const Navbar = () => {
                 {link.name}
               </a>)}
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-              <a href="https://calendly.com/grow-alunera/30min">
+              <a href="https://calendly.com/aluneramarketing/onboarding">
                 Book a Demo
               </a>
             </Button>
@@ -70,7 +70,7 @@ const Navbar = () => {
                 {link.name}
               </a>)}
             <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-              <a href="https://calendly.com/grow-alunera/30min">
+              <a href="https://calendly.com/aluneramarketing/onboarding">
                 Book a Demo
               </a>
             </Button>

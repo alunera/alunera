@@ -55,7 +55,7 @@ const Hero = () => {
             </div>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="text-base rounded-md px-6" asChild>
-                <a href="https://calendly.com/grow-alunera/30min">
+                <a href="https://calendly.com/aluneramarketing/onboarding">
                   Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
