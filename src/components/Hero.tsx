@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
@@ -59,8 +58,10 @@ const Hero = () => {
                   Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="text-base rounded-md px-6">
-                Explore Services
+              <Button size="lg" variant="outline" className="text-base rounded-md px-6" asChild>
+                <a href="https://calendly.com/aluneramarketing/onboarding">
+                  Explore Services
+                </a>
               </Button>
             </div>
           </div>
