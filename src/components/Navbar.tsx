@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -11,9 +14,11 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
   const navLinks = [{
     name: 'Services',
     href: '#services'
@@ -27,6 +32,7 @@ const Navbar = () => {
     name: 'Contact',
     href: '#contact'
   }];
+
   return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-3 bg-white/90 backdrop-blur-md shadow-sm' : 'py-5 bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
@@ -41,8 +47,10 @@ const Navbar = () => {
             {navLinks.map(link => <a key={link.name} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 {link.name}
               </a>)}
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Book a Demo
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <a href="https://calendly.com/grow-alunera/30min">
+                Book a Demo
+              </a>
             </Button>
           </div>
 
@@ -61,11 +69,14 @@ const Navbar = () => {
             {navLinks.map(link => <a key={link.name} href={link.href} className="block text-base font-medium text-foreground hover:text-muted-foreground" onClick={() => setIsMobileMenuOpen(false)}>
                 {link.name}
               </a>)}
-            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-              Book a Demo
+            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <a href="https://calendly.com/grow-alunera/30min">
+                Book a Demo
+              </a>
             </Button>
           </div>
         </div>}
     </nav>;
 };
+
 export default Navbar;

@@ -50,12 +50,14 @@ const Hero = () => {
               </h1>
               <p className="section-subtitle !text-xl">
                 Transform your customer engagement with AI agents that provide instant, 
-                personalized responses across all your digital channels.
+                personalised responses across all your digital channels.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="text-base rounded-md px-6">
-                Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
+              <Button size="lg" className="text-base rounded-md px-6" asChild>
+                <a href="https://calendly.com/grow-alunera/30min">
+                  Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </Button>
               <Button size="lg" variant="outline" className="text-base rounded-md px-6">
                 Explore Services
@@ -92,7 +94,7 @@ const Hero = () => {
                     <p>Yes, do you have the new iPhone 15 Pro in stock?</p>
                   </div>
                   <div className="message-bubble message-bubble-agent">
-                    <p>Yes, we currently have the iPhone 15 Pro in stock in all colors. The 128GB and 256GB variants are available for immediate pickup, while the 512GB and 1TB versions can be reserved and will be available within 2 business days. Would you like me to reserve one for you?</p>
+                    <p>Yes, we currently have the iPhone 15 Pro in stock in all colours. The 128GB and 256GB variants are available for immediate pickup, while the 512GB and 1TB versions can be reserved and will be available within 2 business days. Would you like me to reserve one for you?</p>
                   </div>
                   <div className="message-bubble message-bubble-user">
                     <p>That would be great! Can I reserve the 256GB in Black Titanium?</p>
