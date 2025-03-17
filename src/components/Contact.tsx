@@ -1,7 +1,8 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -166,7 +167,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Email Us</h4>
-                    <p className="text-primary">contact@arcaneai.com</p>
+                    <p className="text-primary">grow@alunera.co.za</p>
                   </div>
                 </div>
                 
@@ -176,21 +177,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Call Us</h4>
-                    <p className="text-primary">+1 (555) 123-4567</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mr-4 mt-1">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Visit Us</h4>
-                    <p className="text-muted-foreground">
-                      123 Innovation Drive<br />
-                      San Francisco, CA 94103<br />
-                      United States
-                    </p>
+                    <p className="text-primary">+27 605091362</p>
                   </div>
                 </div>
               </div>
