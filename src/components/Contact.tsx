@@ -1,12 +1,26 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Mail, Phone, ArrowRight } from 'lucide-react';
 
 const Contact = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    FNAME: '',
+    EMAIL: '',
+    COMPANY: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   useEffect(() => {
     // Fix animation by ensuring visibility
@@ -158,19 +172,41 @@ const Contact = () => {
                   
                   <div className="mc-field-group">
                     <label htmlFor="mce-FNAME">Your Name </label>
-                    <input type="text" name="FNAME" className="text" id="mce-FNAME" value="" />
+                    <input 
+                      type="text" 
+                      name="FNAME" 
+                      className="text" 
+                      id="mce-FNAME" 
+                      value={formData.FNAME} 
+                      onChange={handleInputChange}
+                    />
                   </div>
                   
                   <div className="mc-field-group">
                     <label htmlFor="mce-EMAIL">
                       Email Address <span className="asterisk">*</span>
                     </label>
-                    <input type="email" name="EMAIL" className="required email" id="mce-EMAIL" value="" required />
+                    <input 
+                      type="email" 
+                      name="EMAIL" 
+                      className="required email" 
+                      id="mce-EMAIL" 
+                      value={formData.EMAIL} 
+                      onChange={handleInputChange}
+                      required 
+                    />
                   </div>
                   
                   <div className="mc-field-group">
                     <label htmlFor="mce-COMPANY">Company </label>
-                    <input type="text" name="COMPANY" className="text" id="mce-COMPANY" value="" />
+                    <input 
+                      type="text" 
+                      name="COMPANY" 
+                      className="text" 
+                      id="mce-COMPANY" 
+                      value={formData.COMPANY} 
+                      onChange={handleInputChange}
+                    />
                   </div>
                   
                   <div id="mce-responses" className="clear foot">
