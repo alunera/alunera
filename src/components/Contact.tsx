@@ -93,52 +93,54 @@ const Contact = () => {
               rel="stylesheet" 
               type="text/css" 
             />
-            <style jsx>{`
-              #mc_embed_signup {
-                background: transparent; 
-                clear: left; 
-                font: inherit;
-                width: 100%;
-                max-width: 100%;
-              }
-              #mc_embed_signup .indicates-required {
-                margin-bottom: 15px;
-              }
-              #mc_embed_signup .mc-field-group {
-                margin-bottom: 15px;
-              }
-              #mc_embed_signup input {
-                border: 1px solid var(--border);
-                border-radius: 0.375rem;
-                padding: 0.5rem 0.75rem;
-                width: 100%;
-                font: inherit;
-              }
-              #mc_embed_signup input:focus {
-                outline: none;
-                ring: 1px var(--primary);
-              }
-              #mc_embed_signup label {
-                display: block;
-                margin-bottom: 5px;
-                font-size: 0.875rem;
-                font-weight: 500;
-              }
-              #mc_embed_signup .button {
-                background-color: hsl(var(--primary));
-                color: hsl(var(--primary-foreground));
-                border: none;
-                padding: 0.5rem 1rem;
-                font-weight: 500;
-                border-radius: 0.375rem;
-                cursor: pointer;
-                height: 2.75rem;
-                transition: background-color 0.2s ease;
-              }
-              #mc_embed_signup .button:hover {
-                background-color: hsl(var(--primary) / 0.9);
-              }
-            `}</style>
+            <style type="text/css">
+              {`
+                #mc_embed_signup {
+                  background: transparent; 
+                  clear: left; 
+                  font: inherit;
+                  width: 100%;
+                  max-width: 100%;
+                }
+                #mc_embed_signup .indicates-required {
+                  margin-bottom: 15px;
+                }
+                #mc_embed_signup .mc-field-group {
+                  margin-bottom: 15px;
+                }
+                #mc_embed_signup input {
+                  border: 1px solid var(--border);
+                  border-radius: 0.375rem;
+                  padding: 0.5rem 0.75rem;
+                  width: 100%;
+                  font: inherit;
+                }
+                #mc_embed_signup input:focus {
+                  outline: none;
+                  ring: 1px var(--primary);
+                }
+                #mc_embed_signup label {
+                  display: block;
+                  margin-bottom: 5px;
+                  font-size: 0.875rem;
+                  font-weight: 500;
+                }
+                #mc_embed_signup .button {
+                  background-color: hsl(var(--primary));
+                  color: hsl(var(--primary-foreground));
+                  border: none;
+                  padding: 0.5rem 1rem;
+                  font-weight: 500;
+                  border-radius: 0.375rem;
+                  cursor: pointer;
+                  height: 2.75rem;
+                  transition: background-color 0.2s ease;
+                }
+                #mc_embed_signup .button:hover {
+                  background-color: hsl(var(--primary) / 0.9);
+                }
+              `}
+            </style>
             <div id="mc_embed_signup">
               <form 
                 action="https://gmail.us19.list-manage.com/subscribe/post?u=f6bb7e316e32564f56f2383a3&amp;id=b962b9e7a3&amp;f_id=00c9c7e4f0" 
