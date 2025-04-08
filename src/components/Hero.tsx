@@ -89,13 +89,17 @@ const Hero = () => {
                     <p>Hi, I'd like to know your opening hours.</p>
                   </div>
                   <div className="message-bubble message-bubble-agent">
-                    <p>Hello! Our store is open Monday to Friday from 9 AM to 7 PM, and on Saturdays from 10 AM to 5 PM. We're closed on Sundays. Is there anything specific you'd like to know about our services?</p>
+                    <p>Hello! Our store is open Monday to Friday from 9 AM to 7 PM, and on Saturdays from 10 AM to 5 PM. We're closed on Sundays. Is there anything specific you'd like to know about our services?
+
+</p>
                   </div>
                   <div className="message-bubble message-bubble-user">
-                    <p>Yes, do you have the new iPhone 15 Pro in stock?</p>
+                   <p>Yes, do you have the new iPhone 15 Pro in stock?</p>
                   </div>
                   <div className="message-bubble message-bubble-agent">
-                    <p>Yes, we currently have the iPhone 15 Pro in stock in all colours. The 128GB and 256GB variants are available for immediate pickup, while the 512GB and 1TB versions can be reserved and will be available within 2 business days. Would you like me to reserve one for you?</p>
+                    <p>Yes, we currently have the iPhone 15 Pro in stock in all colours. The 128GB and 256GB variants are available for immediate pickup, while the 512GB and 1TB versions can be reserved and will be available within 2 business days. Would you like me to reserve one for you?
+
+</p>
                   </div>
                   <div className="message-bubble message-bubble-user">
                     <p>That would be great! Can I reserve the 256GB in Black Titanium?</p>

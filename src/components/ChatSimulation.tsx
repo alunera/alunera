@@ -26,7 +26,7 @@ const WhatsAppDemo = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [messages, setMessages] = useState([
     { 
-      sender: "AI Agent", 
+      sender: "Alura", 
       content: "Hello! 👋 How can I help you today?", 
       time: "10:02 AM",
       isUser: false 
@@ -96,7 +96,7 @@ const WhatsAppDemo = () => {
             </svg>
           </div>
           <div className="ml-3">
-            <h3 className="font-medium">ArcaneAI Assistant</h3>
+            <h3 className="font-medium">AluraAI Assistant</h3>
             <p className="text-xs text-muted-foreground">Online • Usually responds in minutes</p>
           </div>
         </div>
@@ -160,7 +160,7 @@ const InstagramDemo = () => {
             </svg>
           </div>
           <div className="ml-3">
-            <h3 className="font-medium">ArcaneAI for Instagram</h3>
+            <h3 className="font-medium">Alura for Instagram</h3>
             <p className="text-xs text-muted-foreground">Active now</p>
           </div>
         </div>
@@ -206,7 +206,7 @@ const WebsiteDemo = () => {
             </svg>
           </div>
           <div className="ml-3">
-            <h3 className="font-medium">ArcaneAI Website Chat</h3>
+            <h3 className="font-medium">AluraAI Website Chat</h3>
             <p className="text-xs text-muted-foreground">Online 24/7</p>
           </div>
         </div>
