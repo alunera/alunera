@@ -261,7 +261,7 @@ const Contact = () => {
               </p>
               <Button variant="outline" size="lg" className="w-full" asChild>
                 <a href="https://calendly.com/aluneramarketing/onboarding">
-                  Build Your Agent <ArrowRight className="ml-2 h-4 w-4" />
+                  Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
             </div>
