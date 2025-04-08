@@ -1,7 +1,5 @@
-
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Mail, Phone, ArrowRight } from 'lucide-react';
 
@@ -23,9 +21,7 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    // Fix animation by ensuring visibility
     if (sectionRef.current) {
-      // Short timeout to ensure DOM is ready
       setTimeout(() => {
         sectionRef.current?.classList.add('opacity-100');
       }, 100);
@@ -52,13 +48,11 @@ const Contact = () => {
   }, []);
 
   useEffect(() => {
-    // Add Mailchimp validation script
     const script = document.createElement('script');
     script.src = "//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js";
     script.async = true;
     document.body.appendChild(script);
 
-    // Add Mailchimp initialization script
     const initScript = document.createElement('script');
     initScript.type = "text/javascript";
     initScript.text = `
@@ -101,7 +95,6 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="glass-panel p-8">
-            {/* Mailchimp Embedded Form */}
             <link 
               href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" 
               rel="stylesheet" 
@@ -214,9 +207,7 @@ const Contact = () => {
                     <div className="response" id="mce-success-response" style={{ display: 'none' }}></div>
                   </div>
                   
-                  {/* Hidden field for bot prevention */}
                   <div aria-hidden="true" style={{ position: 'absolute', left: '-5000px' }}>
-                    {/* real people should not fill this in and expect good things - do not remove this or risk form bot signups */}
                     <input type="text" name="b_f6bb7e316e32564f56f2383a3_b962b9e7a3" tabIndex={-1} value="" />
                   </div>
                   
@@ -270,7 +261,7 @@ const Contact = () => {
               </p>
               <Button variant="outline" size="lg" className="w-full" asChild>
                 <a href="https://calendly.com/aluneramarketing/onboarding">
-                  Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
+                  Build Your Agent <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
             </div>
